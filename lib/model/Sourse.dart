@@ -8,13 +8,13 @@ class SourcesRspons {
     if (json['sources'] != null) {
       sources = [];
       json['sources'].forEach((v) {
-        sources?.add(SourcesRspons.fromJson(v));
+        sources?.add(Source.fromJson(v));
       });
     }
   }
 
   String? status;
-  List<SourcesRspons>? sources;
+  List<Source>? sources;
   String? code;
   String? message;
 
