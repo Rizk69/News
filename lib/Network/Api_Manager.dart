@@ -11,9 +11,9 @@ class ApiManager {
   static const String apiKey = '1d3c48717d6b4acaaa58c7c3ecaa4a90';
 
 //https://newsapi.org/v2/top-headlines/sources?apiKey=1d3c48717d6b4acaaa58c7c3ecaa4a90
-  static Future<SourcesRspons> getSources() async {
-    var url =
-        Uri.https(authority, '/v2/top-headlines/sources', {'apiKey': apiKey});
+  static Future<SourcesRspons> getSources(String catId) async {
+    var url = Uri.https(authority, '/v2/top-headlines/sources',
+        {'apiKey': apiKey, 'category': catId});
     var response = await http.get(url);
     var json = jsonDecode(response.body);
     SourcesRspons sourcesRspons = SourcesRspons.fromJson(json);
