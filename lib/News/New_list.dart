@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:news_app/model/Sourse.dart';
 import 'package:news_app/model/news__response.dart';
 import '../Network/Api_Manager.dart';
@@ -15,7 +16,7 @@ class NewsList extends StatelessWidget {
       child: Column(
         children: [
           FutureBuilder<News_Response>(
-            future: ApiManager.getNewsListbysourceID(source.id ?? ''),
+            future: ApiManager.getNewsListbysourceID(sourceId: source.id ?? ''),
             builder: (buildContext, snapShot) {
               if (snapShot.hasError) {
                 return Center(child: Text(snapShot.error.toString()));

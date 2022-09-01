@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/Home/Home_Screen.dart';
-import 'package:news_app/News/News_Fragment.dart';
+import 'package:news_app/Home/NewsDetailsScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Color(0XFF39A552)),
-      routes: {HomeScreen.routename: (_) => HomeScreen()},
+      routes: {
+        HomeScreen.routename: (_) => HomeScreen(),
+        NewsDetailsScreen.routename: (_) => NewsDetailsScreen()
+      },
       initialRoute: HomeScreen.routename,
     );
   }
