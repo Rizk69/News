@@ -2,7 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/model/news__response.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../Data/DateTime.dart';
 
 class NewsDetailsScreen extends StatelessWidget {
